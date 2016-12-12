@@ -2,12 +2,55 @@
 
 using System;
 
+static class Logger
+{
+    public static void Log(string text)
+    {
+        Console.WriteLine(text);
+    }
+}
+
+// 오리
 class Duck
 {
-    // "꽥꽥"하고 운다
-    public void quack()
+    // "꽦꽦"하고 운다
+    public virtual void quack()
     {
-        Console.WriteLine("꽥꽥!");
+        Logger.Log("꽦꽦");
+    }
+
+    public virtual void swim()
+    {
+        Logger.Log("헤엄헤엄");
+    }
+
+    public virtual void fly()
+    {
+        Logger.Log("파닥파닥");
+    }
+
+    public virtual void display()
+    {
+        Logger.Log("오리모양");
+    }
+}
+
+// 청둥오리
+class MallardDUck : Duck
+{
+    public override void display()
+    {
+        Logger.Log("청둥오리모양");
+    }
+}
+
+
+// 아메리카 흰죽지
+class RedHeadDuck : Duck
+{
+    public override void display()
+    {
+        Logger.Log("아메리카흰죽지모양");
     }
 }
 
@@ -17,5 +60,24 @@ class Introduction
     {
         Duck duck = new Duck();
         duck.quack();
+        duck.swim();
+        duck.display();
+        duck.fly();
+
+        Logger.Log("\n");
+
+        MallardDUck mallardDuck = new MallardDUck();
+        mallardDuck.quack();
+        mallardDuck.swim();
+        mallardDuck.display();
+        mallardDuck.fly();
+
+        Logger.Log("\n");
+
+        RedHeadDuck redheadDuck = new RedHeadDuck();
+        redheadDuck.quack();
+        redheadDuck.swim();
+        redheadDuck.display();
+        redheadDuck.fly();
     }
 }
