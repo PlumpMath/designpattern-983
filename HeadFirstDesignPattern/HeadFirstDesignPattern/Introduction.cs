@@ -134,6 +134,14 @@ namespace HeadFirstDesignPattern
             decoyDuck.swim();
             decoyDuck.display();
             decoyDuck.fly();
+
+            Logger.Log("\n");
+
+            Dog dog = new Dog();
+            dog.makeSound();
+
+            Cat cat = new Cat();
+            cat.makeSound();
         }
     }
 }
