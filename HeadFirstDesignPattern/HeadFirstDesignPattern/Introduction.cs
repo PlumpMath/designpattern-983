@@ -137,11 +137,18 @@ namespace HeadFirstDesignPattern
 
             Logger.Log("\n");
 
-            Dog dog = new Dog();
-            dog.makeSound();
+            //Dog dog = new Dog();
+            //dog.makeSound();
 
-            Cat cat = new Cat();
-            cat.makeSound();
+            //Cat cat = new Cat();
+            //cat.makeSound();
+
+            // Better implementation
+            var animlas = AnimalFactory.Instance.getAnimals();
+            foreach (Animal a in animlas)
+            {
+                a.makeSound();
+            }
         }
     }
 }

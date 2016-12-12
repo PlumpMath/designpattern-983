@@ -8,9 +8,23 @@ namespace HeadFirstDesignPattern
 {
     class AnimalFactory
     {
+        private static AnimalFactory instance;
+
+        public static AnimalFactory Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AnimalFactory();
+                }
+                return instance;
+            }
+        }
+
         List<Animal> animalList;
 
-        List<Animal> getAnimals()
+        public List<Animal> getAnimals()
         {
             if (animalList != null)
                 return animalList;
