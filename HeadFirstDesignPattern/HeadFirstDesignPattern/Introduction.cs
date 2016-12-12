@@ -13,7 +13,6 @@ static class Logger
 // 오리
 class Duck
 {
-    // "꽦꽦"하고 운다
     public virtual void quack()
     {
         Logger.Log("꽦꽦");
