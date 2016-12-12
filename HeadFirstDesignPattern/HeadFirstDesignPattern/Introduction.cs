@@ -72,6 +72,25 @@ class RubberDuck : Duck
     }
 }
 
+// 나무오리
+class DecoyDuck : Duck
+{
+    public override void quack()
+    {
+        // do nothing
+    }
+
+    public override void display()
+    {
+        Logger.Log("나무오리모양");
+    }
+
+    public override void fly()
+    {
+        // do nothing
+    }
+}
+
 class Introduction
 {
     static void Main(string[] args)
@@ -105,5 +124,13 @@ class Introduction
         rubberDuck.swim();
         rubberDuck.display();
         rubberDuck.fly();
+
+        Logger.Log("\n");
+
+        DecoyDuck decoyDuck = new DecoyDuck();
+        decoyDuck.quack();
+        decoyDuck.swim();
+        decoyDuck.display();
+        decoyDuck.fly();
     }
 }
