@@ -54,6 +54,20 @@ class RedHeadDuck : Duck
     }
 }
 
+// 고무오리
+class RubberDuck : Duck
+{
+    public override void quack()
+    {
+        Logger.Log("쁶쁶");
+    }
+
+    public override void display()
+    {
+        Logger.Log("고무오리모양");
+    }
+}
+
 class Introduction
 {
     static void Main(string[] args)
@@ -79,5 +93,13 @@ class Introduction
         redheadDuck.swim();
         redheadDuck.display();
         redheadDuck.fly();
+
+        Logger.Log("\n");
+
+        RubberDuck rubberDuck = new RubberDuck();
+        rubberDuck.quack();
+        rubberDuck.swim();
+        rubberDuck.display();
+        rubberDuck.fly();
     }
 }
