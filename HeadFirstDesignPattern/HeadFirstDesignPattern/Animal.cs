@@ -7,10 +7,8 @@ namespace HeadFirstDesignPattern
         void makeSound();
     }
 
-    class Animal : MakeSoundBehavior
+    abstract class Animal : MakeSoundBehavior
     {
-        public virtual void makeSound()
-        {
-        }
+        public abstract void makeSound();
     }
 }
