@@ -66,6 +66,11 @@ class RubberDuck : Duck
     {
         Logger.Log("고무오리모양");
     }
+
+    public override void fly()
+    {
+        // do nothing
+    }
 }
 
 class Introduction
