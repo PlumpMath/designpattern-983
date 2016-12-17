@@ -66,15 +66,8 @@ namespace HeadFirstDesignPattern
     // 오리
     class Duck
     {
-        FlyBahavior flyBehavior;
-        QuackBehavior quackBehavior;
-
-        public void performFly()
-        {
-            Debug.Assert(flyBehavior != null);
-
-            flyBehavior.fly();
-        }
+        protected FlyBahavior flyBehavior;
+        protected QuackBehavior quackBehavior;
 
         public void performQuack()
         {
@@ -91,6 +84,13 @@ namespace HeadFirstDesignPattern
         public virtual void display()
         {
             Logger.Log("오리모양");
+        }
+
+        public void performFly()
+        {
+            Debug.Assert(flyBehavior != null);
+
+            flyBehavior.fly();
         }
     }
 
