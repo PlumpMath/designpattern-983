@@ -12,6 +12,11 @@ namespace HeadFirstDesignPattern
         }
     }
 
+    interface FlyBahavior
+    {
+        void fly();
+    }
+
     // 오리
     class Duck
     {
@@ -37,7 +42,7 @@ namespace HeadFirstDesignPattern
     }
 
     // 청둥오리
-    class MallardDUck : Duck
+    class MallardDUck : Duck, FlyBahavior
     {
         public override void display()
         {
@@ -47,7 +52,7 @@ namespace HeadFirstDesignPattern
 
 
     // 아메리카 흰죽지
-    class RedHeadDuck : Duck
+    class RedHeadDuck : Duck, FlyBahavior
     {
         public override void display()
         {
@@ -56,7 +61,7 @@ namespace HeadFirstDesignPattern
     }
 
     // 고무오리
-    class RubberDuck : Duck
+    class RubberDuck : Duck, FlyBahavior
     {
         public override void quack()
         {
@@ -75,7 +80,7 @@ namespace HeadFirstDesignPattern
     }
 
     // 나무오리
-    class DecoyDuck : Duck
+    class DecoyDuck : Duck, FlyBahavior
     {
         public override void quack()
         {
