@@ -113,6 +113,12 @@ namespace HeadFirstDesignPattern
     // 아메리카 흰죽지
     class RedHeadDuck : Duck
     {
+        public RedHeadDuck()
+        {
+            flyBehavior = new FlyWithWings();
+            quackBehavior = new Quack();
+        }
+
         public override void display()
         {
             Logger.Log("아메리카흰죽지모양");
@@ -122,6 +128,12 @@ namespace HeadFirstDesignPattern
     // 고무오리
     class RubberDuck : Duck
     {
+        public RubberDuck()
+        {
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new Squeak();
+        }
+
         public override void display()
         {
             Logger.Log("고무오리모양");
@@ -131,6 +143,12 @@ namespace HeadFirstDesignPattern
     // 나무오리
     class DecoyDuck : Duck
     {
+        public DecoyDuck()
+        {
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new MuteQuack();
+        }
+
         public override void display()
         {
             Logger.Log("나무오리모양");
@@ -158,26 +176,26 @@ namespace HeadFirstDesignPattern
             Logger.Log("\n");
 
             RedHeadDuck redheadDuck = new RedHeadDuck();
-            //redheadDuck.quack();
+            redheadDuck.performQuack();
             redheadDuck.swim();
             redheadDuck.display();
-            //redheadDuck.fly();
+            redheadDuck.performFly();
 
             Logger.Log("\n");
 
             RubberDuck rubberDuck = new RubberDuck();
-            //rubberDuck.quack();
+            rubberDuck.performQuack();
             rubberDuck.swim();
             rubberDuck.display();
-            //rubberDuck.fly();
+            rubberDuck.performFly();
 
             Logger.Log("\n");
 
             DecoyDuck decoyDuck = new DecoyDuck();
-            //decoyDuck.quack();
+            decoyDuck.performQuack();
             decoyDuck.swim();
             decoyDuck.display();
-            //decoyDuck.fly();
+            decoyDuck.performFly();
 
             Logger.Log("\n");
 
