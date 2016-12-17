@@ -97,6 +97,12 @@ namespace HeadFirstDesignPattern
     // 청둥오리
     class MallardDuck : Duck
     {
+        public MallardDuck()
+        {
+            flyBehavior = new FlyWithWings();
+            quackBehavior = new Quack();
+        }
+
         public override void display()
         {
             Logger.Log("청둥오리모양");
@@ -144,10 +150,10 @@ namespace HeadFirstDesignPattern
             Logger.Log("\n");
 
             MallardDuck mallardDuck = new MallardDuck();
-            //mallardDuck.quack();
+            mallardDuck.performQuack();
             mallardDuck.swim();
             mallardDuck.display();
-            //mallardDuck.fly();
+            mallardDuck.performFly();
 
             Logger.Log("\n");
 
