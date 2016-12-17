@@ -155,6 +155,21 @@ namespace HeadFirstDesignPattern
         }
     }
 
+    // 모형오리
+    class ModelDuck : Duck
+    {
+        public ModelDuck()
+        {
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new Quack();
+        }
+
+        public override void display()
+        {
+            Logger.Log("모형오리모양");
+        }
+    }
+
     class Introduction
     {
         static void Main(string[] args)
@@ -199,6 +214,14 @@ namespace HeadFirstDesignPattern
 
             Logger.Log("\n");
 
+            ModelDuck modelDuck = new ModelDuck();
+            modelDuck.performQuack();
+            modelDuck.swim();
+            modelDuck.display();
+            modelDuck.performFly();
+
+            Logger.Log("\n");
+
             #region Animal
             //Dog dog = new Dog();
             //dog.makeSound();
@@ -213,6 +236,8 @@ namespace HeadFirstDesignPattern
                 a.makeSound();
             }
             #endregion
+
+            Console.ReadLine();
         }
     }
 }
