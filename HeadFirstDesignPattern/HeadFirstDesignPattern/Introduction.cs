@@ -39,6 +39,14 @@ namespace HeadFirstDesignPattern
         }
     }
 
+    class FlyRocketPowered : FlyBahavior
+    {
+        public void fly()
+        {
+            Logger.Log("로켓 추진으로 날아갑니다!");
+        }
+    }
+
     class Quack : QuackBehavior
     {
         public void quack()
