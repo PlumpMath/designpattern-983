@@ -137,6 +137,7 @@ namespace HeadFirstDesignPattern
 
             Logger.Log("\n");
 
+            #region Animal
             //Dog dog = new Dog();
             //dog.makeSound();
 
@@ -149,6 +150,7 @@ namespace HeadFirstDesignPattern
             {
                 a.makeSound();
             }
+            #endregion
         }
     }
 }
