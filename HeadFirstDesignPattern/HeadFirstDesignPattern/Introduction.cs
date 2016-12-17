@@ -77,6 +77,18 @@ namespace HeadFirstDesignPattern
         protected FlyBahavior flyBehavior;
         protected QuackBehavior quackBehavior;
 
+        public void setFlyBehavior(FlyBahavior fb)
+        {
+            Debug.Assert(fb != null);
+            flyBehavior = fb;
+        }
+
+        public void setQuackBehavior(QuackBehavior qb)
+        {
+            Debug.Assert(qb != null);
+            quackBehavior = qb;
+        }
+
         public void performQuack()
         {
             Debug.Assert(quackBehavior != null);
@@ -226,6 +238,10 @@ namespace HeadFirstDesignPattern
             modelDuck.performQuack();
             modelDuck.swim();
             modelDuck.display();
+            modelDuck.performFly();
+
+            // Assign new rocket powered fly behavior
+            modelDuck.setFlyBehavior(new FlyRocketPowered());
             modelDuck.performFly();
 
             Logger.Log("\n");
