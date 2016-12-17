@@ -1,6 +1,7 @@
 ﻿// <<Head First Design Patterns> p.40
 
 using System;
+using System.Diagnostics;
 
 namespace HeadFirstDesignPattern
 {
@@ -65,6 +66,23 @@ namespace HeadFirstDesignPattern
     // 오리
     class Duck
     {
+        FlyBahavior flyBehavior;
+        QuackBehavior quackBehavior;
+
+        public void performFly()
+        {
+            Debug.Assert(flyBehavior != null);
+
+            flyBehavior.fly();
+        }
+
+        public void performQuack()
+        {
+            Debug.Assert(quackBehavior != null);
+
+            quackBehavior.quack();
+        }
+
         public virtual void swim()
         {
             Logger.Log("헤엄헤엄");
