@@ -17,6 +17,11 @@ namespace HeadFirstDesignPattern
         void fly();
     }
 
+    interface QuackBehavior
+    {
+        void quack();
+    }
+
     class FlyWithWings : FlyBahavior
     {
         public void fly()
@@ -28,6 +33,30 @@ namespace HeadFirstDesignPattern
     class FlyNoWay : FlyBahavior
     {
         public void fly()
+        {
+            // do nothing
+        }
+    }
+
+    class Quack : QuackBehavior
+    {
+        public void quack()
+        {
+            Logger.Log("꽦꽦");
+        }
+    }
+
+    class Squeak : QuackBehavior
+    {
+        public void quack()
+        {
+            Logger.Log("삑삑");
+        }
+    }
+
+    class MuteQuack : QuackBehavior
+    {
+        public void quack()
         {
             // do nothing
         }
@@ -45,7 +74,6 @@ namespace HeadFirstDesignPattern
         {
             Logger.Log("헤엄헤엄");
         }
-
         public virtual void fly()
         {
             Logger.Log("파닥파닥");
