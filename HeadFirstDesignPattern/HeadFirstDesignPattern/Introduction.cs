@@ -95,7 +95,7 @@ namespace HeadFirstDesignPattern
     }
 
     // 청둥오리
-    class MallardDUck : Duck
+    class MallardDuck : Duck
     {
         public override void display()
         {
@@ -143,7 +143,7 @@ namespace HeadFirstDesignPattern
 
             Logger.Log("\n");
 
-            MallardDUck mallardDuck = new MallardDUck();
+            MallardDuck mallardDuck = new MallardDuck();
             //mallardDuck.quack();
             mallardDuck.swim();
             mallardDuck.display();
