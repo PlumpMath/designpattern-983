@@ -35,7 +35,7 @@ namespace HeadFirstDesignPattern
     {
         public void fly()
         {
-            // do nothing
+            Logger.Log("[저는 못 날아요]");
         }
     }
 
@@ -59,7 +59,7 @@ namespace HeadFirstDesignPattern
     {
         public void quack()
         {
-            // do nothing
+            Logger.Log("[저는 소리를 못 내요]");
         }
     }
 
