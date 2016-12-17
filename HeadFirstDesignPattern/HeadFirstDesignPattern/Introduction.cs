@@ -65,18 +65,9 @@ namespace HeadFirstDesignPattern
     // 오리
     class Duck
     {
-        public virtual void quack()
-        {
-            Logger.Log("꽦꽦");
-        }
-
         public virtual void swim()
         {
             Logger.Log("헤엄헤엄");
-        }
-        public virtual void fly()
-        {
-            Logger.Log("파닥파닥");
         }
 
         public virtual void display()
@@ -86,7 +77,7 @@ namespace HeadFirstDesignPattern
     }
 
     // 청둥오리
-    class MallardDUck : Duck, FlyBahavior
+    class MallardDUck : Duck
     {
         public override void display()
         {
@@ -96,7 +87,7 @@ namespace HeadFirstDesignPattern
 
 
     // 아메리카 흰죽지
-    class RedHeadDuck : Duck, FlyBahavior
+    class RedHeadDuck : Duck
     {
         public override void display()
         {
@@ -105,40 +96,20 @@ namespace HeadFirstDesignPattern
     }
 
     // 고무오리
-    class RubberDuck : Duck, FlyBahavior
+    class RubberDuck : Duck
     {
-        public override void quack()
-        {
-            Logger.Log("쁶쁶");
-        }
-
         public override void display()
         {
             Logger.Log("고무오리모양");
         }
-
-        public override void fly()
-        {
-            // do nothing
-        }
     }
 
     // 나무오리
-    class DecoyDuck : Duck, FlyBahavior
+    class DecoyDuck : Duck
     {
-        public override void quack()
-        {
-            // do nothing
-        }
-
         public override void display()
         {
             Logger.Log("나무오리모양");
-        }
-
-        public override void fly()
-        {
-            // do nothing
         }
     }
 
@@ -147,42 +118,42 @@ namespace HeadFirstDesignPattern
         static void Main(string[] args)
         {
             Duck duck = new Duck();
-            duck.quack();
+            //duck.quack();
             duck.swim();
             duck.display();
-            duck.fly();
+            //duck.fly();
 
             Logger.Log("\n");
 
             MallardDUck mallardDuck = new MallardDUck();
-            mallardDuck.quack();
+            //mallardDuck.quack();
             mallardDuck.swim();
             mallardDuck.display();
-            mallardDuck.fly();
+            //mallardDuck.fly();
 
             Logger.Log("\n");
 
             RedHeadDuck redheadDuck = new RedHeadDuck();
-            redheadDuck.quack();
+            //redheadDuck.quack();
             redheadDuck.swim();
             redheadDuck.display();
-            redheadDuck.fly();
+            //redheadDuck.fly();
 
             Logger.Log("\n");
 
             RubberDuck rubberDuck = new RubberDuck();
-            rubberDuck.quack();
+            //rubberDuck.quack();
             rubberDuck.swim();
             rubberDuck.display();
-            rubberDuck.fly();
+            //rubberDuck.fly();
 
             Logger.Log("\n");
 
             DecoyDuck decoyDuck = new DecoyDuck();
-            decoyDuck.quack();
+            //decoyDuck.quack();
             decoyDuck.swim();
             decoyDuck.display();
-            decoyDuck.fly();
+            //decoyDuck.fly();
 
             Logger.Log("\n");
 
