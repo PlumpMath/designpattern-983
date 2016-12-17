@@ -17,6 +17,22 @@ namespace HeadFirstDesignPattern
         void fly();
     }
 
+    class FlyWithWings : FlyBahavior
+    {
+        public void fly()
+        {
+            Logger.Log("파닥파닥");
+        }
+    }
+
+    class FlyNoWay : FlyBahavior
+    {
+        public void fly()
+        {
+            // do nothing
+        }
+    }
+
     // 오리
     class Duck
     {
