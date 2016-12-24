@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeadFirstDesignPattern
+namespace StrategyPattrn
 {
     interface MakeSoundBehavior
     {

@@ -3,16 +3,16 @@
 using System;
 using System.Diagnostics;
 
-namespace HeadFirstDesignPattern
+static class Logger
 {
-    static class Logger
+    public static void Log(string text)
     {
-        public static void Log(string text)
-        {
-            Console.WriteLine(text);
-        }
+        Console.WriteLine(text);
     }
+}
 
+namespace StrategyPattrn
+{
     interface FlyBahavior
     {
         void fly();
@@ -190,7 +190,7 @@ namespace HeadFirstDesignPattern
         }
     }
 
-    class Introduction
+    class Program
     {
         static void Main(string[] args)
         {
